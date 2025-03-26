@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(164, 164, 164);
+    box-sizing: border-box; 
+}
+.accordion{
+    max-width: 700px;
+    margin: 50px;
+}
+.accordion-tab .accordion-toggle{
+    display: none;
+}
+.accordion-tab label{
+    background-color: rgb(59, 59, 255);
+    display: block;
+    font-size: 19px;
+    font-family: arial;
+    color: white;
+    padding: 15px;
+    border-top: 1px solid white;
+}
+label i{
+    float: right;
+    transform: rotate(90deg);
+}
+.accordion-tab .accordion-content{
+    background-color: wheat;
+    max-height: 0px;
+    overflow: hidden;
+    display: block;
+    font-size: 17px;
+    font-family: tahoma;
+} 
+.accordion-tab > .accordion-toggle:checked ~ .accordion-content{
+    max-height: 100vh;
+    padding: 20px 15px;
+}
+.accordion-tab > .accordion-toggle:checked + label i{
+    transform: rotate(0deg);
+}
